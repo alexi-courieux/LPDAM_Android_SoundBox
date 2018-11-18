@@ -1,4 +1,4 @@
-package fr.iutnice.courieux.soundbox.adapter
+package fr.iutnice.courieux.soundbox.sound
 
 import android.content.Context
 import android.view.LayoutInflater

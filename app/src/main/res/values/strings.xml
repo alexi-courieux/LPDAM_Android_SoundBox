@@ -11,4 +11,14 @@
     <string name="author_nathan" translatable="false">Nathan Fournier</string>
     <string name="drawer_open">Open Navigation Drawer</string>
     <string name="drawer_close">Close Navigation Drawer</string>
+    <string name="sound_cat">Cat</string>
+    <string name="sound_dog">Dog</string>
+    <string name="sound_cow">Cow</string>
+    <string name="sound_guitar">Guitar</string>
+    <string name="sound_success">Success</string>
+    <string name="sound_epic">Epic</string>
+    <string name="sound_strange">Strange</string>
+    <string name="sound_monkey">Monkey</string>
+    <string name="sound_nature">Nature</string>
+    <string name="sound_city">City</string>
 </resources>

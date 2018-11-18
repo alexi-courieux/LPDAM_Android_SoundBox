@@ -26,6 +26,6 @@ class CustomView : View {
         super.onDraw(canvas)
         val width = getWidth()
         val height= getHeight()
-        canvas?.drawCircle((width/2).toFloat(),(height/2).toFloat(),250F, mPaint)
+        canvas?.drawCircle((width/2).toFloat(),(height/2).toFloat(),(width*0.45).toFloat(), mPaint)
     }
 }

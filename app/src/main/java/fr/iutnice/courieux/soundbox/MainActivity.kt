@@ -49,13 +49,16 @@ class MainActivity() : AppCompatActivity() {
         replaceFragment(FragmentHome.newInstance())
 
         //Fill the sound list
-        soundList.add(Sound("cow", SoundCategory.ANIMAL, R.raw.animal_cow))
-        soundList.add(Sound("cat", SoundCategory.ANIMAL, R.raw.animal_cat))
-        soundList.add(Sound("dog", SoundCategory.ANIMAL, R.raw.animal_dog))
-        soundList.add(Sound("epic", SoundCategory.JINGLE, R.raw.jingle_epic))
-        soundList.add(Sound("guitar", SoundCategory.JINGLE, R.raw.jingle_guitar))
-        soundList.add(Sound("strange", SoundCategory.JINGLE, R.raw.jingle_strange))
-        soundList.add(Sound("success", SoundCategory.JINGLE, R.raw.jingle_success))
+        soundList.add(Sound(getString(R.string.sound_cow), SoundCategory.ANIMAL, R.raw.animal_cow))
+        soundList.add(Sound(getString(R.string.sound_cat), SoundCategory.ANIMAL, R.raw.animal_cat))
+        soundList.add(Sound(getString(R.string.sound_dog), SoundCategory.ANIMAL, R.raw.animal_dog))
+        soundList.add(Sound(getString(R.string.sound_monkey), SoundCategory.ANIMAL, R.raw.animal_monkey))
+        soundList.add(Sound(getString(R.string.sound_epic), SoundCategory.JINGLE, R.raw.jingle_epic))
+        soundList.add(Sound(getString(R.string.sound_guitar), SoundCategory.JINGLE, R.raw.jingle_guitar))
+        soundList.add(Sound(getString(R.string.sound_strange), SoundCategory.JINGLE, R.raw.jingle_strange))
+        soundList.add(Sound(getString(R.string.sound_success), SoundCategory.JINGLE, R.raw.jingle_success))
+        soundList.add(Sound(getString(R.string.sound_city), SoundCategory.AMBIANCE, R.raw.ambiance_city))
+        soundList.add(Sound(getString(R.string.sound_nature), SoundCategory.AMBIANCE, R.raw.ambiance_nature))
     }
 
     /** method to synchronize after the DrawerLayout's instance state has been restored **/

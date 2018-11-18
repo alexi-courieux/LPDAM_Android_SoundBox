@@ -8,4 +8,14 @@
     <string name="created_by">Crée par</string>
     <string name="drawer_open">Ouvrir Menu Latérale</string>
     <string name="drawer_close">Fermer Menu Latérale</string>
+    <string name="sound_cat">Chat</string>
+    <string name="sound_dog">Chien</string>
+    <string name="sound_cow">Vache</string>
+    <string name="sound_guitar">Guitare</string>
+    <string name="sound_success">Validation</string>
+    <string name="sound_epic">Epique</string>
+    <string name="sound_strange">Etrange</string>
+    <string name="sound_monkey">Singe</string>
+    <string name="sound_nature">Nature</string>
+    <string name="sound_city">Ville</string>
 </resources>
