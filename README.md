@@ -8,10 +8,10 @@ Currently, there is 3 categories :
 * Ambiance
 * Jingle
 
-##Authors
-Courieux Alexi
-Haas Romain
-Fournier Nathan
+## Authors
+* COURIEUX Alexi
+* HAAS Romain
+* FOURNIER Nathan
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

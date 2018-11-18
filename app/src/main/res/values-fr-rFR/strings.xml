@@ -6,4 +6,6 @@
     <string name="jingle">Jingle</string>
     <string name="categories">Catégories</string>
     <string name="created_by">Crée par</string>
+    <string name="drawer_open">Ouvrir Menu Latérale</string>
+    <string name="drawer_close">Fermer Menu Latérale</string>
 </resources>
