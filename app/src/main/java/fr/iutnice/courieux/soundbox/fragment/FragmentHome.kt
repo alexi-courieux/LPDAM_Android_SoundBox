@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import fr.iutnice.courieux.soundbox.MainActivity
 import fr.iutnice.courieux.soundbox.R
-import fr.iutnice.courieux.soundbox.sound.SoundList
+import fr.iutnice.courieux.soundbox.adapter.SoundAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class FragmentHome : Fragment() {

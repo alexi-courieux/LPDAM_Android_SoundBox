@@ -14,6 +14,7 @@ import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryJingle
 import fr.iutnice.courieux.soundbox.fragment.FragmentHome
 import fr.iutnice.courieux.soundbox.sound.Sound
 import fr.iutnice.courieux.soundbox.sound.SoundCategory
+import fr.iutnice.courieux.soundbox.sound.SoundList
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.ClassCastException
 
@@ -26,6 +27,8 @@ class MainActivity() : AppCompatActivity() {
     companion object {
         var instance:MainActivity? = null
     }
+
+    var soundList = SoundList()
 
     //ToolBar
     val drawerToogle by lazy{
@@ -50,6 +53,14 @@ class MainActivity() : AppCompatActivity() {
         replaceFragment(FragmentHome.newInstance())
 
         Sound("cow", SoundCategory.ANIMAL, R.raw.animal_cow).play()
+        //Fill the sound list
+        soundList.add(Sound("cow", SoundCategory.ANIMAL, R.raw.animal_cow))
+        soundList.add(Sound("cat", SoundCategory.ANIMAL, R.raw.animal_cat))
+        soundList.add(Sound("dog", SoundCategory.ANIMAL, R.raw.animal_dog))
+        soundList.add(Sound("epic", SoundCategory.JINGLE, R.raw.jingle_epic))
+        soundList.add(Sound("guitar", SoundCategory.JINGLE, R.raw.jingle_guitar))
+        soundList.add(Sound("strange", SoundCategory.JINGLE, R.raw.jingle_strange))
+        soundList.add(Sound("success", SoundCategory.JINGLE, R.raw.jingle_success))
     }
 
     //ToolBar
