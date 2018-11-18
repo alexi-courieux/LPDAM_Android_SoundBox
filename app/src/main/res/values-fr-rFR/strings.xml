@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">Accueil</string>
+    <string name="animal">Animaux</string>
+    <string name="ambiance">Ambiance</string>
+    <string name="jingle">Jingle</string>
+    <string name="categories">Catégories</string>
+    <string name="created_by">Crée par</string>
+</resources>

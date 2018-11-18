@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name" translatable="false">SoundBox</string>
+    <string name="home">Home</string>
+    <string name="animal">Animal</string>
+    <string name="ambiance">Ambiance</string>
+    <string name="jingle">Jingle</string>
+    <string name="categories">Categories</string>
+    <string name="created_by">Created by</string>
+    <string name="author_alexi" translatable="false">Alexi Courieux</string>
+    <string name="author_romain" translatable="false">Romain Haas</string>
+    <string name="author_nathan" translatable="false">Nathan Fournier</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/fragmentHomeItem"
+            android:title="@string/home"
+            android:icon="@drawable/ic_action_home"
+    />
+    <item android:title="@string/categories">
+        <menu>
+            <item
+                    android:id="@+id/fragmentCategoryAnimalItem"
+                    android:title="@string/animal"
+                    android:icon="@drawable/ic_action_category_animals"
+            />
+            <item
+                    android:id="@+id/fragmentCategoryAmbianceItem"
+                    android:title="@string/ambiance"
+                    android:icon="@drawable/ic_action_category_ambiance"
+            />
+            <item
+                    android:id="@+id/fragmentCategoryJingleItem"
+                    android:title="@string/jingle"
+                    android:icon="@drawable/ic_action_category_jingle"
+            />
+        </menu>
+    </item>
+</menu>
