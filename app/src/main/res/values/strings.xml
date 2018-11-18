@@ -13,4 +13,14 @@
     <string name="drawer_close">Close Navigation Drawer</string>
     <string name="number_picker">Number Picker</string>
     <string name="Value_number_picker">Value of Number Picker : </string>
+    <string name="sound_cat">Cat</string>
+    <string name="sound_dog">Dog</string>
+    <string name="sound_cow">Cow</string>
+    <string name="sound_guitar">Guitar</string>
+    <string name="sound_success">Success</string>
+    <string name="sound_epic">Epic</string>
+    <string name="sound_strange">Strange</string>
+    <string name="sound_monkey">Monkey</string>
+    <string name="sound_nature">Nature</string>
+    <string name="sound_city">City</string
 </resources>
