@@ -9,9 +9,9 @@ Currently, there is 3 categories :
 * Jingle
 
 ## Authors
-Courieux Alexi
-Haas Romain
-Fournier Nathan
+* COURIEUX Alexi
+* HAAS Romain
+* FOURNIER Nathan
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
