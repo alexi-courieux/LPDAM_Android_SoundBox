@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
-import android.view.Menu
 import android.view.MenuItem
 import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryAmbiance
 import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryAnimal
@@ -30,7 +29,7 @@ class MainActivity() : AppCompatActivity() {
 
     var soundList = SoundList()
 
-    //ToolBar
+    /** Construct a new ActionBarDrawerToggle.**/
     val drawerToogle by lazy{
         ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.drawer_open,R.string.drawer_close)
     }
@@ -39,7 +38,7 @@ class MainActivity() : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //ToolBar
+
         setSupportActionBar(toolbar)
 
         navigationView.setNavigationItemSelectedListener {
@@ -47,12 +46,11 @@ class MainActivity() : AppCompatActivity() {
             true
         }
 
-        //ToolBar
+
         drawerLayout.addDrawerListener(drawerToogle)
 
         replaceFragment(FragmentHome.newInstance())
 
-        Sound("cow", SoundCategory.ANIMAL, R.raw.animal_cow).play()
         //Fill the sound list
         soundList.add(Sound("cow", SoundCategory.ANIMAL, R.raw.animal_cow))
         soundList.add(Sound("cat", SoundCategory.ANIMAL, R.raw.animal_cat))
@@ -63,23 +61,19 @@ class MainActivity() : AppCompatActivity() {
         soundList.add(Sound("success", SoundCategory.JINGLE, R.raw.jingle_success))
     }
 
-    //ToolBar
+    /** method to synchronize after the DrawerLayout's instance state has been restored **/
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
+        /** Synchronize the state of the drawer indicator/affordance with the linked DrawerLayout. **/
         drawerToogle.syncState()
     }
 
-    //ToolBar
+    /** This method is passed a Configuration object that specifies the new device configuration **/
     override fun onConfigurationChanged(newConfig: Configuration?) {
         super.onConfigurationChanged(newConfig)
         drawerToogle.onConfigurationChanged(newConfig)
     }
 
-
-   /* override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.fragment_menu, menu)
-        return true
-    }*/
 
     private fun selectDrawItem(item: MenuItem) {
         var fragment: Fragment? = null
@@ -99,17 +93,6 @@ class MainActivity() : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        /*var fragment : Fragment = when (item?.itemId) {
-            R.id.fragmentHomeItem -> FragmentHome.newInstance()
-            R.id.fragmentCategoryAnimalItem -> FragmentCategoryAnimal.newInstance()
-            R.id.fragmentCategoryAmbianceItem -> FragmentCategoryAmbiance.newInstance()
-            R.id.fragmentCategoryJingleItem -> FragmentCategoryJingle.newInstance()
-            else -> {
-                return super.onOptionsItemSelected(item)
-            }
-        }
-        replaceFragment(fragment)
-        return true*/
         return if(drawerToogle.onOptionsItemSelected(item)) true else super.onOptionsItemSelected(item)
     }
 
