@@ -12,7 +12,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="fr.iutnice.courieux.soundbox.MainActivity">
+        <activity
+                android:screenOrientation="portrait"
+                android:name="fr.iutnice.courieux.soundbox.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
