@@ -10,12 +10,20 @@ import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryAmbiance
 import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryAnimal
 import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryJingle
 import fr.iutnice.courieux.soundbox.fragment.FragmentHome
-import fr.iutnice.courieux.soundbox.sound.SoundList
+import fr.iutnice.courieux.soundbox.sound.Sound
+import fr.iutnice.courieux.soundbox.sound.SoundCategory
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.ClassCastException
 
-class MainActivity : AppCompatActivity() {
+class MainActivity() : AppCompatActivity() {
 
+    init {
+        MainActivity.instance = this
+    }
+
+    companion object {
+        var instance:MainActivity? = null
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,8 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         replaceFragment(FragmentHome.newInstance())
 
-        var soundList = SoundList()
-        //soundList.add(Sound("cow",SoundCategory.ANIMAL, ))
+        Sound("cow", SoundCategory.ANIMAL, R.raw.animal_cow).play()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -67,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    /**Replace the content fragment by another one*/
     fun replaceFragment(fragment: Fragment?) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment_container, fragment!!)
