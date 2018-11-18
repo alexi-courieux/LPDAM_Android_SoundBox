@@ -22,6 +22,12 @@
                     android:title="@string/jingle"
                     android:icon="@drawable/ic_action_category_jingle"
             />
+
         </menu>
     </item>
+    <item
+            android:id="@+id/fragmentCreatedBy"
+            android:title="@string/created_by"
+            android:icon="@drawable/ic_action_created_by"
+    />
 </menu>

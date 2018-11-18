@@ -7,10 +7,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
-import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryAmbiance
-import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryAnimal
-import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryJingle
-import fr.iutnice.courieux.soundbox.fragment.FragmentHome
+import fr.iutnice.courieux.soundbox.fragment.*
 import fr.iutnice.courieux.soundbox.sound.Sound
 import fr.iutnice.courieux.soundbox.sound.SoundCategory
 import fr.iutnice.courieux.soundbox.sound.SoundList
@@ -81,6 +78,7 @@ class MainActivity() : AppCompatActivity() {
             R.id.fragmentCategoryAnimalItem -> FragmentCategoryAnimal::class.java
             R.id.fragmentCategoryAmbianceItem -> FragmentCategoryAmbiance::class.java
             R.id.fragmentCategoryJingleItem -> FragmentCategoryJingle::class.java
+            R.id.fragmentCreatedBy -> FragmentCreatedBy::class.java
             else -> FragmentHome::class.java
         }
         try {
@@ -96,7 +94,7 @@ class MainActivity() : AppCompatActivity() {
         return if(drawerToogle.onOptionsItemSelected(item)) true else super.onOptionsItemSelected(item)
     }
 
-    /**Replace the content fragment by another one*/
+    /**Replace the content fragment by another one**/
     fun replaceFragment(fragment: Fragment?) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment_container, fragment!!)
