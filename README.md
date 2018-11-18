@@ -1,14 +1,14 @@
 #SoundBox
 
 ## Membres du projet
-  - COURIEUX Alexi
-	- HAAS Romain
-	- FOURNIER Nathan
+  * COURIEUX Alexi
+  * HAAS Romain
+  * FOURNIER Nathan
   
 ## Auteurs du README
-  - MEYER Nicolas
-	- VENEZIA Matthieu 
-	- VARGA Mihaly
+  * MEYER Nicolas
+  * VENEZIA Matthieu 
+  * VARGA Mihaly
   
  ## Résumé du projet
  SoundBox est une application Android pour jouer diverses catégories de sons.
