@@ -1,9 +1,11 @@
 package fr.iutnice.courieux.soundbox
 
+import android.content.res.Configuration
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
+import android.support.v7.app.ActionBarDrawerToggle
 import android.view.Menu
 import android.view.MenuItem
 import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryAmbiance
@@ -16,14 +18,25 @@ import java.lang.ClassCastException
 
 class MainActivity : AppCompatActivity() {
 
+    //ToolBar
+    val drawerToogle by lazy{
+        ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.drawer_open,R.string.drawer_close)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //ToolBar
+        setSupportActionBar(toolbar)
 
         navigationView.setNavigationItemSelectedListener {
             selectDrawItem(it)
             true
         }
+
+        //ToolBar
+        drawerLayout.addDrawerListener(drawerToogle)
 
         replaceFragment(FragmentHome.newInstance())
 
@@ -31,10 +44,23 @@ class MainActivity : AppCompatActivity() {
         //soundList.add(Sound("cow",SoundCategory.ANIMAL, ))
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    //ToolBar
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+        drawerToogle.syncState()
+    }
+
+    //ToolBar
+    override fun onConfigurationChanged(newConfig: Configuration?) {
+        super.onConfigurationChanged(newConfig)
+        drawerToogle.onConfigurationChanged(newConfig)
+    }
+
+
+   /* override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.fragment_menu, menu)
         return true
-    }
+    }*/
 
     private fun selectDrawItem(item: MenuItem) {
         var fragment: Fragment? = null
@@ -54,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        var fragment : Fragment = when (item?.itemId) {
+        /*var fragment : Fragment = when (item?.itemId) {
             R.id.fragmentHomeItem -> FragmentHome.newInstance()
             R.id.fragmentCategoryAnimalItem -> FragmentCategoryAnimal.newInstance()
             R.id.fragmentCategoryAmbianceItem -> FragmentCategoryAmbiance.newInstance()
@@ -64,7 +90,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         replaceFragment(fragment)
-        return true
+        return true*/
+        return if(drawerToogle.onOptionsItemSelected(item)) true else super.onOptionsItemSelected(item)
     }
 
     fun replaceFragment(fragment: Fragment?) {

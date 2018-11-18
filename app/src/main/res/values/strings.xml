@@ -9,4 +9,6 @@
     <string name="author_alexi" translatable="false">Alexi Courieux</string>
     <string name="author_romain" translatable="false">Romain Haas</string>
     <string name="author_nathan" translatable="false">Nathan Fournier</string>
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
 </resources>
