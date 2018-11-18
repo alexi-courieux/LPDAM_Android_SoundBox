@@ -11,4 +11,6 @@
     <string name="author_nathan" translatable="false">Nathan Fournier</string>
     <string name="drawer_open">Open Navigation Drawer</string>
     <string name="drawer_close">Close Navigation Drawer</string>
+    <string name="number_picker">Number Picker</string>
+    <string name="Value_number_picker">Value of Number Picker : </string>
 </resources>

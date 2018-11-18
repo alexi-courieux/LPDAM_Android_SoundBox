@@ -8,4 +8,6 @@
     <string name="created_by">Crée par</string>
     <string name="drawer_open">Ouvrir Menu Latérale</string>
     <string name="drawer_close">Fermer Menu Latérale</string>
+    <string name="number_picker">Sélecteur de numéro</string>
+    <string name="Value_number_picker" translatable="false">Valeur du Number Picker : </string>
 </resources>

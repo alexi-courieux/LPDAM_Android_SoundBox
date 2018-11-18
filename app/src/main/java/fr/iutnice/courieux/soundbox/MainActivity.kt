@@ -78,6 +78,7 @@ class MainActivity() : AppCompatActivity() {
             R.id.fragmentCategoryAnimalItem -> FragmentCategoryAnimal::class.java
             R.id.fragmentCategoryAmbianceItem -> FragmentCategoryAmbiance::class.java
             R.id.fragmentCategoryJingleItem -> FragmentCategoryJingle::class.java
+            R.id.fragmentGraphicalElementItem -> FragmentGraphicalElement::class.java
             R.id.fragmentCreatedBy -> FragmentCreatedBy::class.java
             else -> FragmentHome::class.java
         }

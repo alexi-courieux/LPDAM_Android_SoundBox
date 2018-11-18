@@ -30,4 +30,9 @@
             android:title="@string/created_by"
             android:icon="@drawable/ic_action_created_by"
     />
+    <item
+            android:id="@+id/fragmentGraphicalElementItem"
+            android:title="@string/number_picker"
+            android:icon="@drawable/ic_action_graphical_element"
+    />
 </menu>
