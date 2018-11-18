@@ -12,11 +12,20 @@ import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryAmbiance
 import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryAnimal
 import fr.iutnice.courieux.soundbox.fragment.FragmentCategoryJingle
 import fr.iutnice.courieux.soundbox.fragment.FragmentHome
-import fr.iutnice.courieux.soundbox.sound.SoundList
+import fr.iutnice.courieux.soundbox.sound.Sound
+import fr.iutnice.courieux.soundbox.sound.SoundCategory
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.ClassCastException
 
-class MainActivity : AppCompatActivity() {
+class MainActivity() : AppCompatActivity() {
+
+    init {
+        MainActivity.instance = this
+    }
+
+    companion object {
+        var instance:MainActivity? = null
+    }
 
     /** Construct a new ActionBarDrawerToggle.**/
     val drawerToogle by lazy{
@@ -40,8 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         replaceFragment(FragmentHome.newInstance())
 
-        var soundList = SoundList()
-        //soundList.add(Sound("cow",SoundCategory.ANIMAL, ))
+        Sound("cow", SoundCategory.ANIMAL, R.raw.animal_cow).play()
     }
 
     /** method to synchronize after the DrawerLayout's instance state has been restored **/
@@ -80,6 +88,7 @@ class MainActivity : AppCompatActivity() {
         return if(drawerToogle.onOptionsItemSelected(item)) true else super.onOptionsItemSelected(item)
     }
 
+    /**Replace the content fragment by another one*/
     fun replaceFragment(fragment: Fragment?) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment_container, fragment!!)
