@@ -8,7 +8,7 @@ Currently, there is 3 categories :
 * Ambiance
 * Jingle
 
-##Authors
+## Authors
 Courieux Alexi
 Haas Romain
 Fournier Nathan
